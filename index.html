@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wongue Davy Cédric — Chargé(e) d'affaires · ALMASI Capital & Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --ink:#1C2416;
+  --mut:#6B7265;
+  --line:rgba(28,36,22,.12);
+  --panel:#1C2416;
+  --olive:#5A6B3A;
+  --gold:#C9A227;
+  --gutter:32px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+  font-size:13px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+section[id]{scroll-margin-top:96px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+
+.page-label{
+  text-align:center;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--mut);padding:22px 0 6px;font-weight:500;
+}
+
+/* HEADER */
+.site-head{
+  position:sticky;top:0;z-index:100;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  padding:12px var(--gutter);
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{
+  width:22px;height:22px;border:2px solid var(--ink);position:relative;flex-shrink:0;
+}
+.brand-mark::after{content:'';position:absolute;inset:5px;background:var(--gold)}
+.brand-name{font-size:11px;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+.head-nav{
+  display:flex;gap:28px;font-size:11px;font-weight:500;letter-spacing:.02em;
+  justify-self:center;align-items:center;
+}
+.head-nav a{color:var(--mut);position:relative;padding-bottom:3px;transition:color .25s}
+.head-nav a:hover{color:var(--ink)}
+.head-nav a.active{color:var(--ink)}
+.head-nav a.active::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);
+}
+.head-nav a.nav-highlight{
+  color:var(--olive);font-weight:700;
+  padding:7px 16px;border-radius:99px;
+  background:rgba(90,107,58,.10);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.head-nav a.nav-highlight::before{
+  content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);
+}
+.head-nav a.nav-highlight:hover,
+.head-nav a.nav-highlight.active{color:#fff;background:var(--olive)}
+.head-nav a.nav-highlight:hover::before,
+.head-nav a.nav-highlight.active::before{background:var(--gold)}
+.head-right{justify-self:end;display:flex;align-items:center;gap:10px}
+
+.lang-btn{
+  display:inline-flex;align-items:center;height:26px;padding:0 12px;
+  border:1px solid var(--line);border-radius:99px;background:transparent;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;letter-spacing:.08em;font-weight:600;color:var(--mut);
+  gap:4px;transition:border-color .25s,color .25s;
+}
+.lang-btn:hover{border-color:var(--ink);color:var(--ink)}
+.lang-btn .sep{color:var(--line);font-weight:400}
+.lang-btn .lg{opacity:.5;transition:color .25s,opacity .25s}
+.lang-btn .lg.active{color:var(--olive);opacity:1}
+.lang-btn:hover .lg.active{color:var(--gold)}
+
+.head-icon{
+  width:26px;height:26px;border:1px solid var(--ink);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:11px;
+  transition:background .25s,color .25s,border-color .25s;
+}
+.head-icon:hover{background:var(--olive);color:#fff;border-color:var(--olive)}
+
+@media(max-width:760px){
+  .site-head{grid-template-columns:auto 1fr auto;gap:12px;padding:10px var(--gutter)}
+  .head-nav{gap:14px;font-size:10px}
+  .head-nav a:nth-child(3){display:none}
+  html{scroll-padding-top:80px}
+  section[id]{scroll-margin-top:80px}
+}
+@media(max-width:520px){
+  .brand-name{display:none}
+  .head-nav a:nth-child(2){display:none}
+}
+
+/* HERO */
+.hero-ss{
+  display:grid;grid-template-columns:1fr 1fr;min-height:520px;
+  padding:0 var(--gutter);
+}
+.hero-left{
+  padding:60px 40px 70px 0;
+  display:flex;flex-direction:column;justify-content:center;
+  border-right:1px solid var(--line);
+}
+.hero-left h1{
+  font-size:clamp(26px,3.4vw,44px);
+  font-weight:700;letter-spacing:-.025em;line-height:1.1;
+  max-width:15ch;
+}
+.hero-left h1 em{
+  font-style:normal;color:var(--olive);
+  background:linear-gradient(transparent 70%,rgba(201,162,39,.28) 70%);
+}
+.hero-lede{font-size:12px;color:var(--mut);margin-top:20px;max-width:38ch}
+.link-underline{
+  display:inline-block;margin-top:18px;font-size:12px;font-weight:600;
+  border-bottom:1.5px solid var(--ink);padding-bottom:2px;
+  align-self:flex-start;transition:color .25s,border-color .25s;
+}
+.link-underline:hover{color:var(--olive);border-color:var(--olive)}
+
+.hero-right{
+  position:relative;background:var(--panel);overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:40px;
+}
+.hero-right::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(201,162,39,.16), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(90,107,58,.35), transparent 55%);
+}
+.hero-overlay{position:relative;z-index:2}
+.hero-overlay .rule{width:32px;height:2px;background:var(--gold);margin-bottom:14px}
+.hero-overlay .h-name{
+  font-size:clamp(22px,2.6vw,32px);
+  font-weight:700;letter-spacing:-.025em;line-height:1.1;color:#fff;
+}
+.hero-overlay .h-name em{
+  display:block;font-style:normal;font-size:11px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);margin-top:6px;
+}
+.hero-overlay .h-meta{
+  margin-top:18px;display:flex;flex-wrap:wrap;gap:16px;
+  font-family:'IBM Plex Mono',monospace;font-size:11px;
+  color:rgba(255,255,255,.85);letter-spacing:.03em;
+}
+.hero-overlay .h-meta span{display:inline-flex;align-items:center;gap:6px}
+.hero-overlay .h-meta .dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+@media(max-width:820px){
+  .hero-ss{grid-template-columns:1fr;min-height:auto}
+  .hero-left{border-right:none;border-bottom:1px solid var(--line);padding:30px 0 50px}
+  .hero-right{min-height:360px}
+}
+
+/* SECTIONS */
+.section-ss{padding:70px var(--gutter) 40px;border-top:1px solid var(--line)}
+.section-ss .head-row{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:40px;
+  margin-bottom:36px;
+}
+.h-big{
+  font-size:clamp(22px,2.4vw,32px);font-weight:700;letter-spacing:-.025em;line-height:1.15;
+  max-width:20ch;
+}
+.section-lede{font-size:12px;color:var(--mut);max-width:44ch;line-height:1.65}
+@media(max-width:760px){.section-ss .head-row{flex-direction:column;gap:16px}}
+
+/* CARTES PARCOURS */
+.blend-cards{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px;
+}
+.blend-card{
+  position:relative;background:var(--panel);color:#fff;
+  min-height:340px;padding:24px 22px;
+  display:flex;flex-direction:column;
+  transition:transform .3s, background .3s;
+}
+.blend-card:hover{transform:translateY(-4px);background:#252F1E}
+.blend-card::before{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:200px;height:200px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+}
+.blend-card::after{
+  content:'';position:absolute;top:62px;left:22px;
+  width:28px;height:2px;background:var(--gold);
+}
+.blend-num{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;
+  letter-spacing:.1em;color:var(--gold);margin-bottom:24px;
+}
+.blend-intro{
+  font-size:11.5px;line-height:1.65;color:rgba(255,255,255,.78);
+  position:relative;z-index:2;
+}
+.blend-intro em{font-style:normal;color:var(--gold);font-weight:600}
+.blend-foot{margin-top:auto;position:relative;z-index:2;padding-top:24px}
+.blend-name{
+  font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.2;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.blend-name .circ{
+  width:16px;height:16px;border-radius:50%;border:1.5px solid var(--gold);
+  display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.blend-name .circ::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.blend-sub{font-size:11px;color:rgba(255,255,255,.55);margin-top:6px}
+.dot-rating{margin-top:12px;font-size:9px;letter-spacing:.3em;color:var(--gold)}
+.dot-rating .off{color:rgba(255,255,255,.2)}
+@media(max-width:900px){.blend-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.blend-cards{grid-template-columns:1fr}}
+
+/* DEUX COLONNES */
+.two-col{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  padding:80px var(--gutter);border-top:1px solid var(--line);
+}
+.two-col.reverse .col-text{order:2}
+.two-col.reverse .col-visual{order:1}
+.col-text h2{
+  font-size:clamp(20px,2.2vw,28px);font-weight:700;letter-spacing:-.02em;
+  line-height:1.15;margin-bottom:20px;
+}
+.col-text p{font-size:12px;color:var(--mut);margin-bottom:12px;line-height:1.7;max-width:44ch}
+.col-text ul{list-style:none;margin:14px 0 18px}
+.col-text ul li{
+  font-size:12px;color:var(--ink);padding:10px 0 10px 16px;position:relative;
+  border-bottom:1px solid var(--line);
+  transition:padding-left .25s, color .25s;
+}
+.col-text ul li:last-child{border-bottom:none}
+.col-text ul li::before{
+  content:'';position:absolute;left:0;top:17px;
+  width:6px;height:6px;background:var(--gold);border-radius:50%;
+}
+.col-text ul li:hover{padding-left:22px;color:var(--olive)}
+.col-text ul li b{font-weight:600}
+
+.col-visual{
+  position:relative;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;
+}
+.visual-panel{
+  width:75%;aspect-ratio:3/4;background:var(--panel);position:relative;overflow:hidden;
+  transition:transform .35s;
+}
+.visual-panel::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent 40%,rgba(201,162,39,.18));
+}
+.col-visual:hover .visual-panel{transform:translateY(-6px)}
+.visual-panel .big-num{
+  position:absolute;bottom:24px;left:24px;
+  font-family:'IBM Plex Mono',monospace;font-size:56px;font-weight:500;
+  color:var(--gold);letter-spacing:-.02em;line-height:1;z-index:2;
+}
+.visual-panel .big-label{
+  position:absolute;bottom:34px;left:96px;
+  font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.15em;
+  text-transform:uppercase;font-weight:500;z-index:2;
+}
+.info-panel{
+  position:absolute;bottom:-20px;right:0;
+  background:#fff;border:1px solid var(--line);padding:18px 20px;
+  width:62%;min-width:220px;
+  box-shadow:0 20px 40px -20px rgba(28,36,22,.15);
+}
+.info-panel .ip-name{
+  font-size:13px;font-weight:700;letter-spacing:-.01em;margin-bottom:12px;
+  padding-bottom:10px;border-bottom:1px solid var(--line);
+}
+.info-row{
+  display:flex;justify-content:space-between;font-size:11px;
+  padding:5px 0;color:var(--mut);
+}
+.info-row b{color:var(--ink);font-weight:600}
+.info-row .dots{letter-spacing:.2em;color:var(--gold);font-size:9px}
+@media(max-width:820px){
+  .two-col{grid-template-columns:1fr;gap:40px;padding:60px var(--gutter)}
+  .two-col.reverse .col-text{order:1}
+  .two-col.reverse .col-visual{order:2}
+  .col-visual{max-width:400px;margin:0 auto;width:100%}
+}
+
+/* CERTIFICATS */
+.cert-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px;
+}
+.cert-card{
+  background:#fff;border:1px solid var(--line);overflow:hidden;
+  cursor:pointer;display:flex;flex-direction:column;
+  transition:transform .3s,border-color .3s,box-shadow .3s;
+}
+.cert-card:hover{
+  border-color:var(--ink);transform:translateY(-4px);
+  box-shadow:0 20px 40px -20px rgba(90,107,58,.28);
+}
+.cert-thumb{
+  aspect-ratio:4/3;background:#F5F6F2;overflow:hidden;position:relative;
+  display:flex;align-items:center;justify-content:center;
+}
+.cert-thumb img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;
+  filter:blur(14px) saturate(.65);
+  transition:filter .6s;
+}
+.cert-thumb.preview-visible img{filter:blur(0) saturate(1)}
+.cert-thumb.preview-visible .load-overlay{display:none}
+.cert-thumb .soon{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;padding:16px;text-align:center;
+}
+.cert-thumb .soon svg{
+  width:26px;height:26px;stroke:var(--olive);fill:none;
+  stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.6;
+}
+.cert-thumb .soon b{font-size:11px;font-weight:600;color:var(--olive);line-height:1.3}
+.cert-info{padding:16px 14px 18px;text-align:center}
+.cert-info .t{
+  font-size:11px;font-weight:600;line-height:1.4;color:var(--ink);
+}
+.cert-card:hover .cert-info .t{color:var(--olive)}
+.cert-empty{
+  grid-column:1/-1;padding:50px 20px;text-align:center;
+  border:1px dashed var(--line);color:var(--mut);font-size:12px;
+}
+@media(max-width:900px){.cert-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.cert-grid{grid-template-columns:1fr}}
+
+.cert-thumb .load-overlay{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;padding:12px;text-align:center;
+  background:rgba(255,255,255,.35);
+}
+.cert-thumb .load-overlay .spinner{
+  width:24px;height:24px;border-radius:50%;
+  border:2px solid rgba(90,107,58,.15);border-top-color:var(--olive);
+  animation:spin 1s linear infinite;
+}
+.cert-thumb .load-overlay .load-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--olive);font-weight:600;line-height:1.3;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* CHART */
+.chart-box{
+  border:1px solid var(--line);margin-top:20px;
+  background:#fff;overflow:hidden;
+}
+.chart-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:26px 32px 16px;border-bottom:1px solid var(--line);
+}
+.chart-head .l{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--mut);
+}
+.chart-head .l b{color:var(--ink);font-weight:600}
+.chart-head .l .dot-live{
+  display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--gold);margin-right:6px;vertical-align:middle;
+}
+.chart-svg{width:100%;height:280px;display:block}
+.chart-legend{
+  display:flex;gap:24px;padding:16px 32px 24px;
+  font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--mut);font-weight:500;border-top:1px solid var(--line);
+}
+.chart-legend span{display:flex;align-items:center;gap:8px}
+.chart-legend i{width:8px;height:8px;border-radius:50%;display:inline-block}
+@media(max-width:600px){
+  .chart-head{padding:20px 20px 14px}
+  .chart-legend{padding:14px 20px 20px;flex-wrap:wrap;gap:16px}
+}
+
+/* WHY ALMASI */
+.why-ofi{
+  padding:110px var(--gutter) 90px;
+  border-top:1px solid var(--line);
+  background:linear-gradient(180deg,#FFFFFF 0%,#F7F8F4 100%);
+}
+.why-head{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:70px;
+  align-items:end;margin-bottom:60px;
+}
+.why-head > div:first-child{display:flex;flex-direction:column}
+.why-label{
+  display:inline-flex;align-items:center;gap:10px;align-self:flex-start;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:#fff;background:var(--olive);
+  padding:9px 18px;border-radius:99px;margin-bottom:26px;font-weight:700;
+}
+.why-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.why-title{
+  font-size:clamp(32px,4vw,52px);font-weight:700;
+  letter-spacing:-.035em;line-height:1.05;max-width:15ch;
+}
+.why-title em{
+  font-style:normal;color:var(--olive);
+  background:linear-gradient(transparent 72%,rgba(201,162,39,.28) 72%);
+}
+.why-intro{font-size:13px;color:var(--mut);line-height:1.8;max-width:52ch}
+.why-intro b{color:var(--ink);font-weight:600}
+.why-intro + .why-intro{margin-top:14px}
+
+.why-dual{
+  display:grid;grid-template-columns:1fr auto 1fr;
+  border:1px solid var(--line);background:#fff;
+  box-shadow:0 30px 70px -40px rgba(28,36,22,.25);
+}
+.why-side{padding:56px 50px}
+.why-side .wn{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;
+  color:var(--gold);margin-bottom:24px;font-weight:700;
+}
+.why-side .wt{
+  font-size:clamp(20px,2.1vw,28px);font-weight:700;
+  letter-spacing:-.025em;line-height:1.15;margin-bottom:18px;
+}
+.why-side .wd{font-size:12.5px;color:var(--mut);line-height:1.75;max-width:44ch}
+.why-side .wl{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.why-side .wl span{
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mut);
+  padding:6px 12px;border:1px solid var(--line);border-radius:99px;
+}
+.why-cross{
+  display:flex;align-items:center;justify-content:center;
+  width:90px;background:var(--panel);color:var(--gold);
+  font-size:22px;font-weight:400;
+}
+@media(max-width:820px){
+  .why-ofi{padding:70px var(--gutter) 60px}
+  .why-head{grid-template-columns:1fr;gap:24px;margin-bottom:40px}
+  .why-dual{grid-template-columns:1fr}
+  .why-cross{width:100%;height:70px}
+  .why-side{padding:34px 26px}
+}
+
+/* CONTACT */
+.newsletter{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;
+  padding:80px var(--gutter);border-top:1px solid var(--line);align-items:start;
+}
+.news-left h2{
+  font-size:clamp(22px,2.4vw,32px);font-weight:700;letter-spacing:-.025em;
+  line-height:1.1;margin-bottom:14px;max-width:15ch;
+}
+.news-left p{font-size:12px;color:var(--mut);line-height:1.7;max-width:38ch}
+.news-right{display:flex;flex-direction:column;gap:14px;max-width:440px}
+.field{
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid var(--ink);padding:14px 0 12px;
+  font-size:13px;font-weight:500;
+  transition:color .25s,border-color .25s,padding-left .25s;
+}
+.field::after{content:'↗';font-size:14px;color:var(--mut);transition:color .25s}
+.field:hover{color:var(--olive);border-color:var(--olive);padding-left:8px}
+.field:hover::after{color:var(--gold)}
+.field-btn{
+  display:flex;justify-content:center;align-items:center;
+  background:var(--ink);color:#fff;padding:16px 24px;
+  font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  margin-top:8px;transition:background .25s;
+}
+.field-btn:hover{background:var(--olive)}
+@media(max-width:760px){
+  .newsletter{grid-template-columns:1fr;gap:30px;padding:60px var(--gutter)}
+}
+
+/* FOOTER */
+.site-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:28px var(--gutter);border-top:1px solid var(--line);
+  font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--mut);font-weight:500;gap:20px;flex-wrap:wrap;
+}
+.site-foot nav{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+.site-foot nav a{transition:color .25s}
+.site-foot nav a:hover{color:var(--ink)}
+.site-foot nav a.nav-highlight{
+  color:var(--olive);font-weight:700;padding:5px 12px;
+  border-radius:99px;background:rgba(90,107,58,.10);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.site-foot nav a.nav-highlight::before{
+  content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);
+}
+.site-foot nav a.nav-highlight:hover{color:#fff;background:var(--olive)}
+.site-foot nav a.nav-highlight:hover::before{background:var(--gold)}
+.socials{display:flex;gap:14px}
+.socials a{
+  width:22px;height:22px;border:1px solid var(--line);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:10px;
+  transition:background .25s,color .25s,border-color .25s;
+}
+.socials a:hover{background:var(--olive);color:#fff;border-color:var(--olive)}
+
+/* LIGHTBOX */
+.lb{
+  position:fixed;inset:0;background:rgba(20,26,16,.94);z-index:200;
+  display:none;align-items:center;justify-content:center;padding:24px;
+}
+.lb.open{display:flex}
+.lb .close{
+  position:absolute;top:20px;right:20px;width:38px;height:38px;
+  border-radius:50%;border:1px solid rgba(255,255,255,.3);
+  background:none;color:#fff;font-size:16px;cursor:pointer;
+  transition:background .25s,border-color .25s;
+}
+.lb .close:hover{background:var(--gold);border-color:var(--gold);color:#1C2416}
+.lb .cap{
+  position:absolute;bottom:24px;left:0;right:0;text-align:center;
+  color:#fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+}
+.lb .soonbox{color:#fff;text-align:center;padding:24px;max-width:440px}
+.lb .soonbox svg{
+  width:40px;height:40px;stroke:var(--gold);fill:none;
+  stroke-width:1.5;margin-bottom:16px;
+}
+.lb .soonbox b{
+  display:block;font-size:20px;font-weight:600;letter-spacing:-.02em;line-height:1.3;
+}
+.lb .img-wrap{position:relative;display:inline-block}
+.lb .img-wrap img{
+  display:block;max-width:92vw;max-height:82vh;background:#fff;
+  filter:blur(28px) saturate(.55);
+  transition:filter .6s;
+}
+.lb .img-wrap.revealable{cursor:pointer}
+.lb .img-wrap.revealed img{filter:blur(0) saturate(1)}
+.lb .img-wrap.revealable::after{
+  content:'Cliquer pour révéler';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  padding:14px 26px;border:1px solid rgba(255,255,255,.55);
+  background:rgba(20,26,16,.65);color:#fff;
+  font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;
+  pointer-events:none;z-index:3;transition:opacity .3s;
+}
+.lb .img-wrap.revealed::after{opacity:0}
+.lb .img-wrap .load-overlay{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;background:rgba(20,26,16,.4);z-index:2;pointer-events:none;
+  transition:opacity .4s;
+}
+.lb .img-wrap .load-overlay .spinner{
+  width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.18);
+  border-top-color:var(--gold);animation:spin 1s linear infinite;
+}
+.lb .img-wrap .load-overlay .load-label{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;
+  text-transform:uppercase;color:#fff;font-weight:600;
+}
+.lb .img-wrap.revealed .load-overlay{opacity:0;visibility:hidden}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.rv.on{opacity:1;transform:none}
+
+@media(max-width:600px){:root{--gutter:20px}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="page-label" data-i18n="page.label">0.1 : Candidature · Chargé(e) d'affaires</div>
+
+<header class="site-head" id="siteHead">
+  <div class="brand">
+    <div class="brand-mark"></div>
+    <div class="brand-name">Wongue<br>Davy Cédric</div>
+  </div>
+  <nav class="head-nav">
+    <a href="#histoire" data-target="histoire" data-i18n="nav.parcours">Parcours</a>
+    <a href="#certificats" data-target="certificats" data-i18n="nav.certificats">Certificats</a>
+    <a href="#alması" data-target="alması" data-i18n="nav.almasi" class="nav-highlight">Pourquoi ALMASI</a>
+    <a href="#contact" data-target="contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="head-right">
+    <button class="lang-btn" id="langBtn" type="button" aria-label="Change language">
+      <span class="lg active" data-lang="fr">FR</span>
+      <span class="sep">/</span>
+      <span class="lg" data-lang="en">EN</span>
+    </button>
+    <a href="#contact" class="head-icon" title="Contact">↗</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-ss" id="top">
+  <div class="hero-left">
+    <h1 data-i18n-html="hero.title">Ingénieur, formé à la <em>finance de marché</em> &amp; au conseil.</h1>
+    <p class="hero-lede" data-i18n="hero.lede">Une candidature pour le stage de Chargé(e) d'affaires chez ALMASI Capital &amp; Advisory : analyse, relation client, développement commercial et suivi de portefeuille.</p>
+    <a href="#certificats" class="link-underline" data-target="certificats" data-i18n="hero.link">Voir les documents</a>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-overlay">
+      <div class="rule"></div>
+      <div class="h-name">
+        Wongue Davy Cédric
+        <em data-i18n="hero.role">Chargé(e) d'affaires</em>
+      </div>
+      <div class="h-meta">
+        <span><span class="dot"></span><span data-i18n="hero.meta1">Douala, Cameroun</span></span>
+        <span><span class="dot"></span><span data-i18n="hero.meta2">Stage Master 2 · Disponible</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section class="section-ss" id="histoire">
+  <div class="head-row">
+    <h2 class="h-big" data-i18n="parcours.title">Quatre piliers pour le métier de chargé d'affaires.</h2>
+    <p class="section-lede rv" data-i18n="parcours.lede">Diplômé ingénieur (2025), formé à la finance par l'Université de Pennsylvanie et initié aux marchés financiers (Bloomberg Market Concepts). Un profil qui relie l'exigence industrielle à la relation client et au conseil.</p>
+  </div>
+
+  <div class="blend-cards">
+    <article class="blend-card rv">
+      <div class="blend-num">01</div>
+      <p class="blend-intro" data-i18n-html="card1.intro">Un chargé d'affaires, c'est d'abord quelqu'un qui <em>écoute, comprend et traduit</em> les besoins d'un client en solution concrète.</p>
+      <div class="blend-foot">
+        <div class="blend-name"><span data-i18n="card1.name">La relation</span><span class="circ"></span></div>
+        <div class="blend-sub" data-i18n="card1.sub">Client & conseil</div>
+        <div class="dot-rating">●●●●●</div>
+      </div>
+    </article>
+
+    <article class="blend-card rv">
+      <div class="blend-num">02</div>
+      <p class="blend-intro" data-i18n-html="card2.intro">Chiffrer un dossier, suivre un portefeuille, détecter un risque : <em>les gestes du terrain industriel sont ceux de l'analyse financière.</em></p>
+      <div class="blend-foot">
+        <div class="blend-name"><span data-i18n="card2.name">L'analyse</span><span class="circ"></span></div>
+        <div class="blend-sub" data-i18n="card2.sub">Chiffres & rigueur</div>
+        <div class="dot-rating">●●●●●</div>
+      </div>
+    </article>
+
+    <article class="blend-card rv">
+      <div class="blend-num">03</div>
+      <p class="blend-intro" data-i18n-html="card3.intro">Excel, Bloomberg, reporting : des outils qui transforment une donnée brute en <em>argumentaire client, chiffré et partageable.</em></p>
+      <div class="blend-foot">
+        <div class="blend-name"><span data-i18n="card3.name">Les outils</span><span class="circ"></span></div>
+        <div class="blend-sub" data-i18n="card3.sub">Excel · Bloomberg</div>
+        <div class="dot-rating">●●●●<span class="off">●</span></div>
+      </div>
+    </article>
+
+    <article class="blend-card rv">
+      <div class="blend-num">04</div>
+      <p class="blend-intro" data-i18n-html="card4.intro">Marché financier, bourse, produits d'investissement : un <em>secteur exigeant</em> où la confiance se construit dossier après dossier.</p>
+      <div class="blend-foot">
+        <div class="blend-name"><span data-i18n="card4.name">Le cap</span><span class="circ"></span></div>
+        <div class="blend-sub" data-i18n="card4.sub">Marché financier</div>
+        <div class="dot-rating">●●●●●</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- TERRAIN -->
+<section class="two-col" id="terrain">
+  <div class="col-text">
+    <h2 data-i18n="terrain.title">Le terrain. Cinq expériences industrielles, un même réflexe : vérifier.</h2>
+    <p data-i18n="terrain.p">Du contrôle qualité à la standardisation industrielle, j'ai appris à lire un dossier, à suivre un écart, à dialoguer avec des interlocuteurs variés et à produire un reporting fiable — les gestes du quotidien d'un chargé d'affaires.</p>
+    <ul>
+      <li data-i18n-html="terrain.li1"><b>Michele's Industries</b>, analyse sous Excel, 3 postes standardisés, contrôle de conformité ANOR. Recyclage +40 %, arrêts −15 %.</li>
+      <li data-i18n-html="terrain.li2"><b>AVRAM APTUS</b>, 04 micro-industries accompagnées (SOP, plans HACCP), variabilité réduite de 18 %.</li>
+      <li data-i18n-html="terrain.li3"><b>FBI, Food &amp; Beverages Industries</b>, bilans matière/énergie, compromis stabilité-coût amélioré de 12 %.</li>
+      <li data-i18n-html="terrain.li4"><b>OK Foods · SIC Cacao</b>, contrôles sanitaires, suivi QHSE, analyse Ishikawa.</li>
+    </ul>
+  </div>
+  <div class="col-visual">
+    <div class="visual-panel">
+      <div class="big-num">05</div>
+      <div class="big-label" data-i18n="terrain.biglabel">Expériences</div>
+    </div>
+    <div class="info-panel">
+      <div class="ip-name">Wongue Davy Cédric</div>
+      <div class="info-row"><span data-i18n="info.field">Terrain</span><b>2021 / 2025</b></div>
+      <div class="info-row"><span data-i18n="info.location">Lieu</span><b data-i18n="info.location.val">Douala, CM</b></div>
+      <div class="info-row"><span data-i18n="info.rigour">Rigueur</span><span class="dots">●●●●●</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTILS -->
+<section class="two-col reverse" id="outils">
+  <div class="col-text">
+    <h2 data-i18n="outils.title">Les outils. Excel et Bloomberg pour l'analyse.</h2>
+    <p data-i18n="outils.p">Les compétences attendues pour suivre un portefeuille client, analyser un dossier d'investissement et produire un reporting clair, sans jargon, avec méthode.</p>
+    <ul>
+      <li data-i18n-html="outils.li2"><b>Excel</b> : Excel Fundamentals for Data Analysis (Macquarie University)</li>
+      <li data-i18n-html="outils.li3"><b>Bloomberg</b> : Bloomberg Market Concepts (BMC)</li>
+      <li data-i18n-html="outils.li4"><b>Analyse</b> : suivi d'indicateurs (KPI), gap analysis, rapprochements</li>
+    </ul>
+    <a href="#certificats" class="link-underline" data-target="certificats" data-i18n="outils.link">Voir les certifications</a>
+  </div>
+  <div class="col-visual">
+    <div class="visual-panel">
+      <div class="big-num">04</div>
+      <div class="big-label" data-i18n="outils.biglabel">Certifications</div>
+    </div>
+    <div class="info-panel">
+      <div class="ip-name" data-i18n="outils.stack">Stack technique</div>
+      <div class="info-row"><span>Excel</span><b data-i18n="outils.advanced">Avancé</b></div>
+      <div class="info-row"><span>Bloomberg</span><b data-i18n="outils.certified2">Certifié</b></div>
+      <div class="info-row"><span>Anglais</span><b>C1</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATS -->
+<section class="section-ss" id="certificats">
+  <div class="head-row">
+    <h2 class="h-big" data-i18n="certs.title">Certificats &amp; attestations.</h2>
+    <p class="section-lede rv" data-i18n="certs.lede">Diplômes, certificats et attestations vérifiables. Cliquez sur une vignette pour agrandir l'aperçu.</p>
+  </div>
+
+  <div class="cert-grid" id="certGrid">
+    <div class="cert-empty" id="certEmpty" data-i18n="certs.loading">Chargement des documents…</div>
+  </div>
+</section>
+
+<!-- COMPETENCES -->
+<section class="section-ss" id="competences">
+  <div class="head-row">
+    <h2 class="h-big" data-i18n="path.title">Une trajectoire, deux forces.</h2>
+    <p class="section-lede rv" data-i18n="path.lede">De l'excellence industrielle vers les compétences finance, marché et relation client. La même exigence : comprendre, chiffrer, convaincre.</p>
+  </div>
+
+  <div class="chart-box rv">
+    <div class="chart-head">
+      <div class="l"><span class="dot-live"></span><b data-i18n="chart.flow">Flux</b> · <span data-i18n="chart.range">parcours 2021 → 2025</span></div>
+      <div class="l" data-i18n="chart.perpetual">vue d'ensemble</div>
+    </div>
+
+    <svg class="chart-svg" viewBox="0 0 800 280" preserveAspectRatio="none" aria-hidden="true">
+      <g stroke="rgba(28,36,22,.06)" stroke-width="1">
+        <line x1="0" y1="56" x2="800" y2="56"/>
+        <line x1="0" y1="112" x2="800" y2="112"/>
+        <line x1="0" y1="168" x2="800" y2="168"/>
+        <line x1="0" y1="224" x2="800" y2="224"/>
+      </g>
+      <path d="M0,150 C80,120 160,140 240,110 C320,80 400,140 480,100 C560,60 640,120 720,90 C760,75 780,80 800,72"
+            fill="none" stroke="#5A6B3A" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M0,200 C80,190 160,170 240,180 C320,190 400,140 480,150 C560,160 640,110 720,120 C760,125 780,110 800,100"
+            fill="none" stroke="#C9A227" stroke-width="2.6" stroke-linecap="round"/>
+      <g fill="#5A6B3A">
+        <circle cx="0" cy="150" r="3"/><circle cx="240" cy="110" r="3"/>
+        <circle cx="480" cy="100" r="3"/><circle cx="720" cy="90" r="3"/>
+      </g>
+      <g fill="#C9A227">
+        <circle cx="0" cy="200" r="3"/><circle cx="240" cy="180" r="3"/>
+        <circle cx="480" cy="150" r="3"/><circle cx="720" cy="120" r="3"/>
+      </g>
+      <g font-family="IBM Plex Mono, monospace" font-size="10" fill="rgba(107,114,101,.55)">
+        <text x="12" y="268">2021</text>
+        <text x="770" y="268" text-anchor="end">2025</text>
+      </g>
+    </svg>
+
+    <div class="chart-legend">
+      <span><i style="background:#5A6B3A"></i><span data-i18n="chart.legend1">Excellence industrielle &amp; qualité</span></span>
+      <span><i style="background:#C9A227"></i><span data-i18n="chart.legend2">Finance, marché &amp; relation client</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ALMASI -->
+<section class="why-ofi" id="alması">
+  <div class="why-head">
+    <div>
+      <div class="why-label" data-i18n="why.label">Pourquoi ALMASI ?</div>
+      <h2 class="why-title" data-i18n-html="why.title">Là où la <em>rigueur industrielle</em> sert la relation client.</h2>
+    </div>
+    <div>
+      <p class="why-intro" data-i18n="why.intro">Chez ALMASI Capital &amp; Advisory, mes deux forces se rejoignent : la <b>rigueur analytique</b> apprise sur le terrain et le <b>sens du service client</b> que je veux développer dans la finance de marché.</p>
+      <p class="why-intro" data-i18n="why.intro2">Comprendre une chaîne de production, c'est déjà comprendre la logique économique d'un client. Sécuriser une donnée, c'est déjà sécuriser une relation. Rejoindre ALMASI, c'est travailler à l'intersection exacte de ce que je sais faire et de ce que je veux devenir : un chargé d'affaires complet, à l'aise autant sur les chiffres que dans la relation.</p>
+    </div>
+  </div>
+
+  <div class="why-dual">
+    <div class="why-side">
+      <div class="wn">01</div>
+      <div class="wt" data-i18n="why.left.title">Rigueur & analyse</div>
+      <div class="wd" data-i18n="why.left.desc">Contrôle qualité, standardisation, bilans matière et énergie : les gestes que j'ai pratiqués sur le terrain et qui m'ont appris à lire une donnée, à suivre un écart et à sécuriser un dossier.</div>
+      <div class="wl">
+        <span>Analyse</span><span>Méthode</span><span>Conformité</span>
+      </div>
+    </div>
+    <div class="why-cross">+</div>
+    <div class="why-side">
+      <div class="wn">02</div>
+      <div class="wt" data-i18n="why.right.title">Relation & finance</div>
+      <div class="wd" data-i18n="why.right.desc">Comptabilité financière, Bloomberg, analyse de coûts : les compétences que je construis pour comprendre un besoin client, chiffrer une proposition et suivre un portefeuille dans la durée.</div>
+      <div class="wl">
+        <span>Client</span><span>Conseil</span><span>Portefeuille</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="newsletter" id="contact">
+  <div class="news-left rv">
+    <h2 data-i18n="contact.title">Prêt à rejoindre ALMASI Capital &amp; Advisory.</h2>
+    <p data-i18n="contact.p">Disponible pour le stage de Chargé(e) d'affaires à Douala (niveau Master 2) : analyse de dossiers, relation client, suivi de portefeuille, reporting et accompagnement au développement commercial.</p>
+  </div>
+  <div class="news-right rv">
+    <a href="tel:+237698385430" class="field"><span>+237 698 385 430</span></a>
+    <a href="mailto:davycedricw@outlook.com" class="field"><span>davycedricw@outlook.com</span></a>
+    <a href="cv-wongue-davy-cedric.pdf" class="field-btn" download><span data-i18n="contact.btn">Télécharger le CV PDF</span></a>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div>© 2026 Wongue Davy Cédric</div>
+  <nav>
+    <a href="#histoire" data-target="histoire" data-i18n="nav.parcours">Parcours</a>
+    <a href="#certificats" data-target="certificats" data-i18n="nav.certificats">Certificats</a>
+    <a href="#alması" data-target="alması" data-i18n="nav.almasi" class="nav-highlight">Pourquoi ALMASI</a>
+    <a href="#contact" data-target="contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="socials">
+    <a href="mailto:davycedricw@outlook.com" title="Email">@</a>
+    <a href="mailto:recrutement@almasicapital.com" title="Candidature ALMASI">✉</a>
+    <a href="#top" data-target="top" title="Top">↑</a>
+  </div>
+</footer>
+
+<div class="lb" id="lightbox">
+  <button class="close" id="lbClose" type="button">×</button>
+  <div id="lbContent"></div>
+  <div class="cap" id="lbCap"></div>
+</div>
+
+<script>
+var I18N = {
+  fr: {
+    'page.label': '0.1 : Candidature · Chargé(e) d\'affaires',
+    'nav.parcours': 'Parcours',
+    'nav.certificats': 'Certificats',
+    'nav.almasi': 'Pourquoi ALMASI',
+    'nav.contact': 'Contact',
+
+    'hero.title': 'Ingénieur, formé à la <em>finance de marché</em> &amp; au conseil.',
+    'hero.lede': "Une candidature pour le stage de Chargé(e) d'affaires chez ALMASI Capital & Advisory : analyse, relation client, développement commercial et suivi de portefeuille.",
+    'hero.link': 'Voir les documents',
+    'hero.role': "Chargé(e) d'affaires",
+    'hero.meta1': 'Douala, Cameroun',
+    'hero.meta2': 'Stage Master 2 · Disponible',
+
+    'parcours.title': "Quatre piliers pour le métier de chargé d'affaires.",
+    'parcours.lede': "Diplômé ingénieur (2025), formé à la finance par l'Université de Pennsylvanie et initié aux marchés financiers (Bloomberg Market Concepts). Un profil qui relie l'exigence industrielle à la relation client et au conseil.",
+
+    'card1.intro': "Un chargé d'affaires, c'est d'abord quelqu'un qui <em>écoute, comprend et traduit</em> les besoins d'un client en solution concrète.",
+    'card1.name': 'La relation', 'card1.sub': 'Client & conseil',
+    'card2.intro': "Chiffrer un dossier, suivre un portefeuille, détecter un risque : <em>les gestes du terrain industriel sont ceux de l'analyse financière.</em>",
+    'card2.name': "L'analyse", 'card2.sub': 'Chiffres & rigueur',
+    'card3.intro': "Excel, Bloomberg, reporting : des outils qui transforment une donnée brute en <em>argumentaire client, chiffré et partageable.</em>",
+    'card3.name': 'Les outils', 'card3.sub': 'Excel · Bloomberg',
+    'card4.intro': "Marché financier, bourse, produits d'investissement : un <em>secteur exigeant</em> où la confiance se construit dossier après dossier.",
+    'card4.name': 'Le cap', 'card4.sub': 'Marché financier',
+
+    'terrain.title': 'Le terrain. Cinq expériences industrielles, un même réflexe : vérifier.',
+    'terrain.p': "Du contrôle qualité à la standardisation industrielle, j'ai appris à lire un dossier, à suivre un écart, à dialoguer avec des interlocuteurs variés et à produire un reporting fiable — les gestes du quotidien d'un chargé d'affaires.",
+    'terrain.li1': "<b>Michele's Industries</b>, analyse sous Excel, 3 postes standardisés, contrôle de conformité ANOR. Recyclage +40 %, arrêts −15 %.",
+    'terrain.li2': '<b>AVRAM APTUS</b>, 04 micro-industries accompagnées (SOP, plans HACCP), variabilité réduite de 18 %.',
+    'terrain.li3': '<b>FBI, Food &amp; Beverages Industries</b>, bilans matière/énergie, compromis stabilité-coût amélioré de 12 %.',
+    'terrain.li4': '<b>OK Foods · SIC Cacao</b>, contrôles sanitaires, suivi QHSE, analyse Ishikawa.',
+    'terrain.biglabel': 'Expériences',
+
+    'info.field': 'Terrain',
+    'info.location': 'Lieu',
+    'info.location.val': 'Douala, CM',
+    'info.rigour': 'Rigueur',
+
+    'outils.title': "Les outils. Excel et Bloomberg pour l'analyse.",
+    'outils.p': "Les compétences attendues pour suivre un portefeuille client, analyser un dossier d'investissement et produire un reporting clair, sans jargon, avec méthode.",
+    'outils.li2': '<b>Excel</b> : Excel Fundamentals for Data Analysis (Macquarie University)',
+    'outils.li3': '<b>Bloomberg</b> : Bloomberg Market Concepts (BMC)',
+    'outils.li4': "<b>Analyse</b> : suivi d'indicateurs (KPI), gap analysis, rapprochements",
+    'outils.link': 'Voir les certifications',
+    'outils.biglabel': 'Certifications',
+    'outils.stack': 'Stack technique',
+    'outils.certified2': 'Certifié',
+    'outils.advanced': 'Avancé',
+
+    'certs.title': 'Certificats &amp; attestations.',
+    'certs.lede': "Diplômes, certificats et attestations vérifiables. Cliquez sur une vignette pour agrandir l'aperçu.",
+    'certs.loading': 'Chargement des documents…',
+
+    'path.title': 'Une trajectoire, deux forces.',
+    'path.lede': "De l'excellence industrielle vers les compétences finance, marché et relation client. La même exigence : comprendre, chiffrer, convaincre.",
+    'chart.flow': 'Flux',
+    'chart.range': 'parcours 2021 → 2025',
+    'chart.perpetual': "vue d'ensemble",
+    'chart.legend1': 'Excellence industrielle & qualité',
+    'chart.legend2': 'Finance, marché & relation client',
+
+    'why.label': 'Pourquoi ALMASI ?',
+    'why.title': "Là où la <em>rigueur industrielle</em> sert la relation client.",
+    'why.intro': "Chez ALMASI Capital &amp; Advisory, mes deux forces se rejoignent : la <b>rigueur analytique</b> apprise sur le terrain et le <b>sens du service client</b> que je veux développer dans la finance de marché.",
+    'why.intro2': "Comprendre une chaîne de production, c'est déjà comprendre la logique économique d'un client. Sécuriser une donnée, c'est déjà sécuriser une relation. Rejoindre ALMASI, c'est travailler à l'intersection exacte de ce que je sais faire et de ce que je veux devenir : un chargé d'affaires complet, à l'aise autant sur les chiffres que dans la relation.",
+    'why.left.title': 'Rigueur & analyse',
+    'why.left.desc': "Contrôle qualité, standardisation, bilans matière et énergie : les gestes que j'ai pratiqués sur le terrain et qui m'ont appris à lire une donnée, à suivre un écart et à sécuriser un dossier.",
+    'why.right.title': 'Relation & finance',
+    'why.right.desc': "Comptabilité financière, Bloomberg, analyse de coûts : les compétences que je construis pour comprendre un besoin client, chiffrer une proposition et suivre un portefeuille dans la durée.",
+
+    'contact.title': 'Prêt à rejoindre ALMASI Capital &amp; Advisory.',
+    'contact.p': "Disponible pour le stage de Chargé(e) d'affaires à Douala (niveau Master 2) : analyse de dossiers, relation client, suivi de portefeuille, reporting et accompagnement au développement commercial.",
+    'contact.btn': 'Télécharger le CV PDF',
+
+    'soon.title': 'Aperçu en cours<br>de mise à jour',
+    'soon.long': 'Aperçu en cours de mise à jour',
+    'preview.loading': "Chargement de l'aperçu…",
+
+    'doc.diplome': "Diplôme d'ingénieur, Université Catholique Saint-Jérôme de Douala",
+    'doc.penn': 'Fundamentals of Finance, University of Pennsylvania',
+    'doc.c1english': "Certificat d'anglais niveau C1",
+    'doc.bloomberg': 'Bloomberg Market Concepts (BMC), Bloomberg'
+  },
+  en: {
+    'page.label': '0.1 : Application · Business Officer',
+    'nav.parcours': 'Journey',
+    'nav.certificats': 'Certificates',
+    'nav.almasi': 'Why ALMASI',
+    'nav.contact': 'Contact',
+
+    'hero.title': 'Engineer, trained in <em>market finance</em> &amp; advisory.',
+    'hero.lede': "An application for the Business Officer internship at ALMASI Capital & Advisory: analysis, client relations, business development and portfolio monitoring.",
+    'hero.link': 'View documents',
+    'hero.role': 'Business Officer',
+    'hero.meta1': 'Douala, Cameroon',
+    'hero.meta2': 'Master 2 internship · Available',
+
+    'parcours.title': 'Four pillars for the business officer role.',
+    'parcours.lede': "Engineering graduate (2025), trained in finance by the University of Pennsylvania and introduced to financial markets (Bloomberg Market Concepts). A profile that connects industrial rigour with client relations and advisory.",
+
+    'card1.intro': "A business officer is first and foremost someone who <em>listens, understands and translates</em> a client's needs into a concrete solution.",
+    'card1.name': 'The relationship', 'card1.sub': 'Client & advisory',
+    'card2.intro': "Assessing a file, monitoring a portfolio, detecting a risk: <em>the gestures of the industrial field are those of financial analysis.</em>",
+    'card2.name': 'The analysis', 'card2.sub': 'Figures & rigour',
+    'card3.intro': "Excel, Bloomberg, reporting: tools that turn raw data into a <em>quantified, shareable client pitch.</em>",
+    'card3.name': 'The tools', 'card3.sub': 'Excel · Bloomberg',
+    'card4.intro': "Financial market, stock exchange, investment products: a <em>demanding sector</em> where trust is built file after file.",
+    'card4.name': 'The goal', 'card4.sub': 'Financial market',
+
+    'terrain.title': 'The field. Five industrial experiences, one same reflex: verify.',
+    'terrain.p': "From quality control to industrial standardisation, I learned to read a file, track a variance, engage with varied stakeholders and produce reliable reporting — the everyday gestures of a business officer.",
+    'terrain.li1': "<b>Michele's Industries</b>, Excel-based analysis, 3 positions standardised, ANOR compliance control. Packaging recycling +40%, unplanned downtime −15%.",
+    'terrain.li2': '<b>AVRAM APTUS</b>, 04 micro-industries supported (SOPs, HACCP plans), product variability reduced by 18%.',
+    'terrain.li3': '<b>FBI, Food &amp; Beverages Industries</b>, mass and energy balances, stability/cost trade-off improved by 12%.',
+    'terrain.li4': '<b>OK Foods · SIC Cacao</b>, sanitary controls, QHSE monitoring, Ishikawa analysis.',
+    'terrain.biglabel': 'Experiences',
+
+    'info.field': 'Field',
+    'info.location': 'Location',
+    'info.location.val': 'Douala, CM',
+    'info.rigour': 'Rigour',
+
+    'outils.title': 'The tools. Excel and Bloomberg for analysis.',
+    'outils.p': "The skills expected to monitor a client portfolio, analyse an investment file and produce clear reporting, without jargon, with method.",
+    'outils.li2': '<b>Excel</b>: Excel Fundamentals for Data Analysis (Macquarie University)',
+    'outils.li3': '<b>Bloomberg</b>: Bloomberg Market Concepts (BMC)',
+    'outils.li4': "<b>Analysis</b>: KPI tracking, gap analysis, reconciliations",
+    'outils.link': 'View certifications',
+    'outils.biglabel': 'Certifications',
+    'outils.stack': 'Technical stack',
+    'outils.certified2': 'Certified',
+    'outils.advanced': 'Advanced',
+
+    'certs.title': 'Certificates &amp; attestations.',
+    'certs.lede': "Diplomas, certificates and verifiable attestations. Click a thumbnail to enlarge the preview.",
+    'certs.loading': 'Loading documents…',
+
+    'path.title': 'One path, two forces.',
+    'path.lede': "From industrial excellence to finance, market and client-relations skills. The same requirement: understand, quantify, convince.",
+    'chart.flow': 'Flow',
+    'chart.range': 'journey 2021 → 2025',
+    'chart.perpetual': 'overview',
+    'chart.legend1': 'Industrial excellence & quality',
+    'chart.legend2': 'Finance, market & client relations',
+
+    'why.label': 'Why ALMASI?',
+    'why.title': 'Where <em>industrial rigour</em> serves client relations.',
+    'why.intro': "At ALMASI Capital &amp; Advisory, my two strengths come together: the <b>analytical rigour</b> learned in the field and the <b>sense of client service</b> I want to develop in market finance.",
+    'why.intro2': "Understanding a production line already means understanding a client's economic logic. Securing data already means securing a relationship. Joining ALMASI means working at the exact intersection of what I know how to do and what I want to become: a complete business officer, equally at ease with figures and with people.",
+    'why.left.title': 'Rigour & analysis',
+    'why.left.desc': "Quality control, standardisation, mass and energy balances: the gestures I practised in the field and that taught me to read data, track a variance and secure a file.",
+    'why.right.title': 'Relationship & finance',
+    'why.right.desc': "Financial accounting, Bloomberg, cost analysis: the skills I am building to understand a client's need, quantify a proposal and monitor a portfolio over time.",
+
+    'contact.title': 'Ready to join ALMASI Capital &amp; Advisory.',
+    'contact.p': "Available for the Business Officer internship in Douala (Master 2 level): file analysis, client relations, portfolio monitoring, reporting and support to business development.",
+    'contact.btn': 'Download CV PDF',
+
+    'soon.title': 'Preview being<br>updated',
+    'soon.long': 'Preview being updated',
+    'preview.loading': 'Loading preview…',
+
+    'doc.diplome': "Engineering Degree, Université Catholique Saint-Jérôme de Douala",
+    'doc.penn': 'Fundamentals of Finance, University of Pennsylvania',
+    'doc.c1english': 'English Certificate Level C1',
+    'doc.bloomberg': 'Bloomberg Market Concepts (BMC), Bloomberg'
+  }
+};
+
+var currentLang = 'fr';
+
+function t(key){
+  return (I18N[currentLang] && I18N[currentLang][key]) || (I18N.fr[key]) || key;
+}
+
+function applyTranslations(){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var v = t(el.getAttribute('data-i18n'));
+    if(v) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+    var v = t(el.getAttribute('data-i18n-html'));
+    if(v) el.innerHTML = v;
+  });
+  document.documentElement.lang = currentLang;
+  document.querySelectorAll('.lang-btn .lg').forEach(function(s){
+    s.classList.toggle('active', s.getAttribute('data-lang') === currentLang);
+  });
+  if(typeof renderCerts === 'function') renderCerts();
+}
+
+function setLang(lang){
+  if(lang !== 'fr' && lang !== 'en') return;
+  currentLang = lang;
+  try{ localStorage.setItem('wd_lang', lang); }catch(e){}
+  applyTranslations();
+}
+
+document.getElementById('langBtn').addEventListener('click', function(){
+  setLang(currentLang === 'fr' ? 'en' : 'fr');
+});
+
+(function(){
+  try{
+    var saved = localStorage.getItem('wd_lang');
+    if(saved === 'en' || saved === 'fr') currentLang = saved;
+  }catch(e){}
+  if(currentLang !== 'fr') applyTranslations();
+})();
+
+/* NAVIGATION */
+(function(){
+  var head = document.getElementById('siteHead');
+  function headerHeight(){ return head ? head.getBoundingClientRect().height : 64; }
+  function scrollToId(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    var top = el.getBoundingClientRect().top + window.pageYOffset - headerHeight() - 18;
+    if(top < 0) top = 0;
+    window.scrollTo({top: top, behavior: 'smooth'});
+  }
+  document.querySelectorAll('a[data-target]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('data-target');
+      if(!document.getElementById(id)) return;
+      e.preventDefault();
+      scrollToId(id);
+      if(history.replaceState){ history.replaceState(null, '', '#' + id); }
+    });
+  });
+  window.addEventListener('load', function(){
+    if(window.location.hash){
+      var id = window.location.hash.substring(1);
+      if(document.getElementById(id)){ setTimeout(function(){ scrollToId(id); }, 80); }
+    }
+  });
+})();
+
+(function(){
+  var links = document.querySelectorAll('.head-nav a[data-target]');
+  var sections = [];
+  links.forEach(function(a){
+    var s = document.getElementById(a.getAttribute('data-target'));
+    if(s) sections.push({el: s, link: a});
+  });
+  function update(){
+    var y = window.scrollY + 140;
+    var cur = null;
+    sections.forEach(function(s){ if(s.el.offsetTop <= y) cur = s; });
+    links.forEach(function(a){ a.classList.remove('active'); });
+    if(cur) cur.link.classList.add('active');
+  }
+  window.addEventListener('scroll', update, {passive: true});
+  window.addEventListener('resize', update);
+  update();
+})();
+
+/* REVEAL */
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('on'); });
+}, {threshold: .12, rootMargin: '0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+/* CERTIFICATS */
+var renderCerts;
+
+(function(){
+  var DOCUMENTS = [
+    {key:'doc.diplome',   type:'image/jpeg', data:'diplome-ingenieur-wongue-davy-cedric.jpg', revealable:true},
+    {key:'doc.penn',      type:'image/jpeg', data:'certificat-penn-finance.jpg',              revealable:true},
+    {key:'doc.c1english', type:'image/jpeg', data:'certificat-c1-anglais.jpg',                revealable:true},
+    {key:'doc.bloomberg', type:'image/jpeg', data:'certificat-bloomberg-bmc.jpg',             revealable:false}
+  ];
+  var grid = document.getElementById('certGrid');
+  var empty = document.getElementById('certEmpty');
+  var lb = document.getElementById('lightbox');
+  var lbContent = document.getElementById('lbContent');
+  var lbCap = document.getElementById('lbCap');
+  var lbClose = document.getElementById('lbClose');
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  function soonBox(){
+    return '<div class="soon">' +
+      '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>' +
+      '<b>' + t('soon.title') + '</b>' +
+    '</div>';
+  }
+  function loadOverlay(){
+    return '<div class="load-overlay">' +
+      '<div class="spinner"></div>' +
+      '<div class="load-label">' + t('preview.loading') + '</div>' +
+    '</div>';
+  }
+
+  renderCerts = function(){
+    Array.prototype.slice.call(grid.children).forEach(function(c){
+      if(c !== empty) grid.removeChild(c);
+    });
+    if(DOCUMENTS.length === 0){ empty.style.display = ''; empty.textContent = t('certs.loading'); return; }
+    empty.style.display = 'none';
+
+    DOCUMENTS.forEach(function(c, idx){
+      var name = t(c.key);
+      var card = document.createElement('div');
+      card.className = 'cert-card';
+      card.addEventListener('click', function(){ openLightbox(idx); });
+
+      var thumb = document.createElement('div');
+      thumb.className = c.revealable ? 'cert-thumb preview-visible' : 'cert-thumb';
+
+      if(c.type.indexOf('pdf') === 0){
+        thumb.innerHTML = soonBox();
+      } else {
+        var img = document.createElement('img');
+        img.src = c.data; img.alt = name; img.loading = 'lazy';
+        img.onerror = function(){ thumb.innerHTML = soonBox(); };
+        thumb.appendChild(img);
+        if(!c.revealable){
+          thumb.insertAdjacentHTML('beforeend', loadOverlay());
+        }
+      }
+
+      var info = document.createElement('div');
+      info.className = 'cert-info';
+      info.innerHTML = '<div class="t">' + esc(name) + '</div>';
+
+      card.appendChild(thumb); card.appendChild(info);
+      grid.appendChild(card);
+    });
+  };
+
+  function openLightbox(idx){
+    var c = DOCUMENTS[idx];
+    var name = t(c.key);
+    lbContent.innerHTML = '';
+
+    if(c.type.indexOf('pdf') === 0){
+      var iframe = document.createElement('iframe');
+      iframe.src = c.data;
+      iframe.style.cssText = 'width:min(900px,92vw);height:82vh;background:#fff;border:0';
+      lbContent.appendChild(iframe);
+    } else {
+      var wrap = document.createElement('div');
+      wrap.className = c.revealable ? 'img-wrap revealable' : 'img-wrap';
+      var img = document.createElement('img');
+      img.src = c.data; img.alt = name;
+      img.onerror = function(){
+        lbContent.innerHTML = '<div class="soonbox"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>' + t('soon.long') + '</b></div>';
+      };
+      wrap.appendChild(img);
+      wrap.insertAdjacentHTML('beforeend', loadOverlay());
+      if(c.revealable){
+        wrap.addEventListener('click', function(){ wrap.classList.add('revealed'); });
+      }
+      lbContent.appendChild(wrap);
+    }
+    lbCap.textContent = name;
+    lb.classList.add('open');
+  }
+
+  function closeLightbox(){ lb.classList.remove('open'); lbContent.innerHTML = ''; }
+  lbClose.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLightbox(); });
+
+  renderCerts();
+})();
+</script>
+</body>
+</html>
